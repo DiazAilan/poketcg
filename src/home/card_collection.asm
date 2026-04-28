@@ -218,3 +218,18 @@ GetCardAlbumProgress::
 	call DisableSRAM
 	pop hl
 	ret
+
+; Hack/debug: give MAX_AMOUNT_OF_CARD copies of every real card ID in the album.
+DebugFillCardCollection99::
+	call EnableSRAM
+	ld h, HIGH(sCardCollection)
+	ld l, $01
+	ld b, NUM_CARDS
+	ld a, MAX_AMOUNT_OF_CARD
+.loop
+	ld [hl], a
+	inc l
+	dec b
+	jr nz, .loop
+	call DisableSRAM
+	ret

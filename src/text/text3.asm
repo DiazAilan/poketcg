@@ -1127,12 +1127,9 @@ ConfigMenuExitText:
 	text "   Exit Settings"
 	done
 
-UnusedText034c: ; Unused
-	text "Duel           [<RAMTEXT>]"
-	line "SELECT         [<RAMTEXT>]"
-	line "Receive many cards"
-	line "To Pokémon Dome 1"
-	line "To Pokémon Dome 2"
+PCMenuDebugFillDoneText:
+	text "Debug: 99 of each card"
+	line "added to the album."
 	done
 
 UnusedText034d: ; Unused
@@ -1156,6 +1153,7 @@ PCMenuOptionsText:
 	line "Read Mail"
 	line "Glossary"
 	line "Print"
+	line "DEBUG: Full album"
 	line "Shut Down"
 	done
 
@@ -1270,19 +1268,19 @@ Mail15Text:
 	done
 
 NewGameText:
-	text "NEW GAM*"
+	text "NEW GAME"
 	done
 
 CardPopContinueDiaryNewGameText:
-	text "CARD POP*"
+	text "CARD POP!"
 	line "CONTINUE FROM DIARY"
-	line "NEW GAM*"
+	line "NEW GAME"
 	done
 
 CardPopContinueDiaryNewGameContinueDuelText:
-	text "CARD POP*"
+	text "CARD POP!"
 	line "CONTINUE FROM DIARY"
-	line "New Gam*"
+	line "New Game"
 	line "CONTINUE DUEL"
 	done
 

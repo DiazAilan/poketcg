@@ -39,6 +39,13 @@ MainMenu_NewGame:
 	ld a, [sTextSpeed]
 	ld [wTextSpeed], a
 	call DisableSRAM
+; Skip Mason lab intro + practice duel: give default starter and mark tutorial done.
+	xor a
+	ld [wStarterDeckChoice], a ; Charmander deck
+	farcall ApplyStarterDeckFromWRAMChoice
+	ld a, EVENT_MASON_LAB_STATE
+	ld c, MASON_LAB_RECEIVED_STARTER_DECK
+	farcall SetEventValue
 	ld a, MUSIC_STOP
 	call PlaySong
 	farcall SetMainSGBBorder

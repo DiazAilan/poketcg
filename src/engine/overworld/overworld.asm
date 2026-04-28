@@ -1219,7 +1219,7 @@ PCMenu:
 	ldh a, [hCurMenuItem]
 	cp e
 	jr nz, .exit
-	cp $4
+	cp $5 ; Shut Down
 	jr z, .exit
 	call Func_c2a3
 	ld a, [wSelectedPCMenuItem]
@@ -1244,6 +1244,7 @@ PointerTable_c846:
 	dw PCMenu_ReadMail
 	dw PCMenu_Glossary
 	dw PCMenu_Print
+	dw PCMenu_DebugFillAlbum
 
 DisplayPCMenu:
 	ld a, [wSelectedPCMenuItem]
@@ -1279,6 +1280,14 @@ PCMenu_Print:
 	call Set_OBJ_8x8
 	call WhiteOutDMGPals
 	call DoFrameIfLCDEnabled
+	ret
+
+PCMenu_DebugFillAlbum:
+	farcall DebugFillCardCollection99
+	ld de, sAlbumProgress
+	farcall UpdateAlbumProgress
+	ldtx hl, PCMenuDebugFillDoneText
+	call PrintScrollableText_NoTextBoxLabel
 	ret
 
 Func_c891:

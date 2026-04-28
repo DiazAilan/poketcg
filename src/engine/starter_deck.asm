@@ -1,3 +1,8 @@
+; uses wStarterDeckChoice ($0 Charmander, $1 Squirtle, $2 Bulbasaur)
+ApplyStarterDeckFromWRAMChoice::
+	ld a, [wStarterDeckChoice]
+	jp _AddStarterDeck
+
 ; adds the chosen starter deck to the player's first deck configuration
 ; and also adds to the collection its corresponding extra cards
 ; input:

@@ -193,6 +193,10 @@ def isarray(x):
     return isinstance(x, array)
 
 def tostring(row):
+    # Python 3 renamed array.tostring() -> array.tobytes()
+    tobytes = getattr(row, "tobytes", None)
+    if tobytes is not None:
+        return tobytes()
     return row.tostring()
 
 def interleave_planes(ipixels, apixels, ipsize, apsize):

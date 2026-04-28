@@ -845,7 +845,7 @@ TextOffsets::
 	textpointer ConfigMenuMessageSpeedText                         ; 0x0349
 	textpointer ConfigMenuDuelAnimationText                        ; 0x034a
 	textpointer ConfigMenuExitText                                 ; 0x034b
-	textpointer UnusedText034c                                     ; 0x034c
+	textpointer PCMenuDebugFillDoneText                            ; 0x034c
 	textpointer UnusedText034d                                     ; 0x034d
 	textpointer UnusedText034e                                     ; 0x034e
 	textpointer UnusedText034f                                     ; 0x034f
