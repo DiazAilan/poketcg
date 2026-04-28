@@ -1270,19 +1270,19 @@ Mail15Text:
 	done
 
 NewGameText:
-	text "NEW GAME"
+	text "NEW GAM*"
 	done
 
 CardPopContinueDiaryNewGameText:
-	text "CARD POP!"
+	text "CARD POP*"
 	line "CONTINUE FROM DIARY"
-	line "NEW GAME"
+	line "NEW GAM*"
 	done
 
 CardPopContinueDiaryNewGameContinueDuelText:
-	text "CARD POP!"
+	text "CARD POP*"
 	line "CONTINUE FROM DIARY"
-	line "New Game"
+	line "New Gam*"
 	line "CONTINUE DUEL"
 	done
 
