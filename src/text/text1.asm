@@ -351,7 +351,7 @@ ChooseNextActivePokemonText:
 
 PressStartWhenReadyText:
 	text "Press START"
-	line "When you are ready."
+	line "When you're ready."
 	done
 
 YouPlayFirstText:
